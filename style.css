@@ -155,6 +155,7 @@ body {
   background-color: var(--color-background);
   line-height: 1.6;
   font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img {
@@ -209,7 +210,7 @@ section {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: var(--transition);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav {
@@ -267,7 +268,7 @@ section {
 .nav-toggle span {
   width: 25px;
   height: 3px;
-  background: var(--color-primary);
+  background: var(--color-text);
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -280,13 +281,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text);
   font-size: 1.5rem;
   transition: var(--transition);
+  opacity: 0.8;
 }
 
 .theme-toggle:hover {
-  color: var(--color-primary);
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* ===================================
@@ -366,7 +368,7 @@ section {
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-lg);
   text-align: center;
-  transition: var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   animation: fadeInUp 0.6s ease;
 }
 
@@ -426,6 +428,7 @@ section {
   background: var(--color-background);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-sm);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-item svg {
@@ -447,6 +450,7 @@ section {
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-md);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group {
@@ -468,7 +472,9 @@ section {
   border-radius: var(--border-radius);
   font-family: var(--font-primary);
   font-size: 1rem;
-  transition: var(--transition);
+  background: var(--color-background);
+  color: var(--color-text);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .form-group input:focus,
@@ -536,6 +542,7 @@ button[type="submit"] {
   background: var(--color-primary);
   color: white;
   padding: var(--spacing-lg) 0 var(--spacing-md);
+  transition: background-color 0.3s ease;
 }
 
 .footer-content {
@@ -616,17 +623,19 @@ button[type="submit"] {
 }
 
 .modal-content {
-  background: white;
+  background: var(--color-background);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-lg);
   max-width: 500px;
   width: 90%;
   text-align: center;
   animation: fadeInUp 0.3s ease;
+  box-shadow: var(--shadow-lg);
 }
 
 .modal-content h3 {
   margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
 }
 
 .modal-content p {

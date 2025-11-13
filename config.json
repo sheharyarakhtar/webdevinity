@@ -36,10 +36,18 @@
     "primaryDark": "#553C9A",
     "accent": "#9F7AEA",
     "accentDark": "#805AD5",
-    "text": "#333333",
-    "textLight": "#666666",
-    "background": "#ffffff",
-    "backgroundLight": "#FAF5FF"
+    "light": {
+      "text": "#333333",
+      "textLight": "#666666",
+      "background": "#ffffff",
+      "backgroundLight": "#FAF5FF"
+    },
+    "dark": {
+      "text": "#e5e7eb",
+      "textLight": "#9ca3af",
+      "background": "#0f0f23",
+      "backgroundLight": "#1a1a2e"
+    }
   },
   "social": {
     "linkedin": "https://linkedin.com/in/yourprofile",

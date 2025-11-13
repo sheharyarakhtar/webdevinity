@@ -21,6 +21,25 @@
   
   <title>Loading...</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Initialize theme immediately to prevent flash
+    (function() {
+      let theme = localStorage.getItem('theme');
+      
+      if (!theme) {
+        // Try to detect system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          theme = 'light';
+        } else {
+          theme = 'dark';
+        }
+      }
+      
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
   <!-- Navigation -->

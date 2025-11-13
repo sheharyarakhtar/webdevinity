@@ -119,14 +119,33 @@ function applyCustomColors() {
   const root = document.documentElement;
   const colors = config.colors;
   
+  // Apply brand colors (these work in both themes)
   if (colors.primary) root.style.setProperty('--color-primary', colors.primary);
   if (colors.primaryDark) root.style.setProperty('--color-primary-dark', colors.primaryDark);
   if (colors.accent) root.style.setProperty('--color-accent', colors.accent);
   if (colors.accentDark) root.style.setProperty('--color-accent-dark', colors.accentDark);
-  if (colors.text) root.style.setProperty('--color-text', colors.text);
-  if (colors.textLight) root.style.setProperty('--color-text-light', colors.textLight);
-  if (colors.background) root.style.setProperty('--color-background', colors.background);
-  if (colors.backgroundLight) root.style.setProperty('--color-background-light', colors.backgroundLight);
+  
+  // Get current theme
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  
+  // Check if using new theme-specific color structure
+  if (colors.light && colors.dark) {
+    // New structure: separate light and dark colors
+    const themeColors = currentTheme === 'dark' ? colors.dark : colors.light;
+    
+    if (themeColors.text) root.style.setProperty('--color-text', themeColors.text);
+    if (themeColors.textLight) root.style.setProperty('--color-text-light', themeColors.textLight);
+    if (themeColors.background) root.style.setProperty('--color-background', themeColors.background);
+    if (themeColors.backgroundLight) root.style.setProperty('--color-background-light', themeColors.backgroundLight);
+  } else {
+    // Old structure: backward compatibility - only apply in light mode
+    if (currentTheme !== 'dark') {
+      if (colors.text) root.style.setProperty('--color-text', colors.text);
+      if (colors.textLight) root.style.setProperty('--color-text-light', colors.textLight);
+      if (colors.background) root.style.setProperty('--color-background', colors.background);
+      if (colors.backgroundLight) root.style.setProperty('--color-background-light', colors.backgroundLight);
+    }
+  }
 }
 
 function populateServices() {
@@ -269,24 +288,9 @@ function setReferrer() {
 function initializeTheme() {
   const themeToggle = document.getElementById('themeToggle');
   
-  // Check for saved theme preference or default to system preference, fallback to dark
-  let theme = localStorage.getItem('theme');
-  
-  if (!theme) {
-    // Try to detect system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      theme = 'dark';
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      theme = 'light';
-    } else {
-      // Default to dark if can't detect
-      theme = 'dark';
-    }
-  }
-  
-  // Apply theme
-  document.documentElement.setAttribute('data-theme', theme);
-  updateThemeIcon(theme);
+  // Get current theme (already set by inline script)
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  updateThemeIcon(currentTheme);
   
   // Toggle theme on button click
   if (themeToggle) {
@@ -297,6 +301,28 @@ function initializeTheme() {
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
       updateThemeIcon(newTheme);
+      
+      // Reapply custom colors for the new theme
+      if (config && config.colors) {
+        applyCustomColors();
+      }
+    });
+  }
+  
+  // Listen for system theme changes
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      // Only update if user hasn't manually set a preference
+      if (!localStorage.getItem('theme')) {
+        const newTheme = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        updateThemeIcon(newTheme);
+        
+        // Reapply custom colors for the new theme
+        if (config && config.colors) {
+          applyCustomColors();
+        }
+      }
     });
   }
 }

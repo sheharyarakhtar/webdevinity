@@ -3,8 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
   <title>Thank You - Message Received</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Initialize theme immediately to prevent flash
+    (function() {
+      let theme = localStorage.getItem('theme');
+      
+      if (!theme) {
+        // Try to detect system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          theme = 'light';
+        } else {
+          theme = 'dark';
+        }
+      }
+      
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <style>
     .thankyou-container {
       min-height: 100vh;
@@ -13,6 +33,7 @@
       justify-content: center;
       background: linear-gradient(135deg, var(--color-background-light) 0%, var(--color-background) 100%);
       padding: var(--spacing-md);
+      transition: background 0.3s ease;
     }
     
     .thankyou-card {
@@ -24,6 +45,7 @@
       width: 100%;
       box-shadow: var(--shadow-lg);
       animation: fadeInUp 0.6s ease;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
     
     .thankyou-icon {
@@ -35,6 +57,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: background-color 0.3s ease;
     }
     
     .thankyou-icon svg {
@@ -141,10 +164,33 @@
         // Apply custom colors
         if (config.colors) {
           const root = document.documentElement;
-          if (config.colors.primary) root.style.setProperty('--color-primary', config.colors.primary);
-          if (config.colors.primaryDark) root.style.setProperty('--color-primary-dark', config.colors.primaryDark);
-          if (config.colors.accent) root.style.setProperty('--color-accent', config.colors.accent);
-          if (config.colors.success) root.style.setProperty('--color-success', config.colors.success);
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          const colors = config.colors;
+          
+          // Apply brand colors (work in both themes)
+          if (colors.primary) root.style.setProperty('--color-primary', colors.primary);
+          if (colors.primaryDark) root.style.setProperty('--color-primary-dark', colors.primaryDark);
+          if (colors.accent) root.style.setProperty('--color-accent', colors.accent);
+          if (colors.success) root.style.setProperty('--color-success', colors.success);
+          
+          // Check if using new theme-specific color structure
+          if (colors.light && colors.dark) {
+            // New structure: separate light and dark colors
+            const themeColors = currentTheme === 'dark' ? colors.dark : colors.light;
+            
+            if (themeColors.text) root.style.setProperty('--color-text', themeColors.text);
+            if (themeColors.textLight) root.style.setProperty('--color-text-light', themeColors.textLight);
+            if (themeColors.background) root.style.setProperty('--color-background', themeColors.background);
+            if (themeColors.backgroundLight) root.style.setProperty('--color-background-light', themeColors.backgroundLight);
+          } else {
+            // Old structure: backward compatibility - only apply in light mode
+            if (currentTheme !== 'dark') {
+              if (colors.text) root.style.setProperty('--color-text', colors.text);
+              if (colors.textLight) root.style.setProperty('--color-text-light', colors.textLight);
+              if (colors.background) root.style.setProperty('--color-background', colors.background);
+              if (colors.backgroundLight) root.style.setProperty('--color-background-light', colors.backgroundLight);
+            }
+          }
         }
         
         // Update page title
