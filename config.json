@@ -1,0 +1,55 @@
+{
+  "businessName": "BluePeak Digital Solutions",
+  "tagline": "We fix your digital presence fast.",
+  "heroHeadline": "Professional Web Solutions in 48 Hours",
+  "heroSubheadline": "We help businesses establish a powerful online presence with fast, reliable web solutions that drive results.",
+  "heroCTA": "Get Started Today",
+  "heroImage": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=800&fit=crop",
+  "whatsapp": "923015388946",
+  "email": "contact@bluepeakdigital.com",
+  "formAction": "https://docs.google.com/forms/d/e/1FAIpQLSd1176-7uqR5F_rFuN_emf4WNan2JNkdb95om5DFLLvSo3tXA/formResponse",
+  "formFields": {
+    "name": "entry.1930747673",
+    "phone": "entry.712257613",
+    "email": "entry.683428092",
+    "message": "entry.434884089"
+  },
+  "services": [
+    {
+      "icon": "assets/icons/consulting.svg",
+      "title": "Website Fixes",
+      "description": "Quick fixes and updates to get your website running smoothly and looking professional."
+    },
+    {
+      "icon": "assets/icons/solutions.svg",
+      "title": "Business Landing Pages",
+      "description": "High-converting landing pages designed to capture leads and grow your business."
+    },
+    {
+      "icon": "assets/icons/support.svg",
+      "title": "Lead Funnels",
+      "description": "Complete funnel systems that turn visitors into customers automatically."
+    }
+  ],
+  "colors": {
+    "primary": "#2c3e8f",
+    "primaryDark": "#1e2a5f",
+    "accent": "#4f3cc9",
+    "accentDark": "#392fa6",
+    "text": "#333333",
+    "textLight": "#666666",
+    "background": "#ffffff",
+    "backgroundLight": "#f8f9ff"
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/bluepeakdigital",
+    "twitter": "https://twitter.com/bluepeakdigital",
+    "facebook": "https://facebook.com/bluepeakdigital"
+  },
+  "seo": {
+    "title": "BluePeak Digital Solutions - Web Solutions in 48 Hours",
+    "description": "Professional web solutions delivered fast. Website fixes, landing pages, and lead funnels that help your business grow.",
+    "keywords": "web solutions, landing pages, website fixes, lead funnels, digital agency",
+    "ogImage": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=630&fit=crop"
+  }
+}

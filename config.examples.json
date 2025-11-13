@@ -1,0 +1,249 @@
+{
+  "examples": {
+    "digital_agency": {
+      "businessName": "Digital Growth Agency",
+      "tagline": "Grow Your Business Online",
+      "heroHeadline": "Transform Your Digital Presence",
+      "heroSubheadline": "We help businesses grow with proven digital marketing strategies, stunning web design, and data-driven results.",
+      "heroCTA": "Get Free Consultation",
+      "services": [
+        {
+          "icon": "assets/icons/consulting.svg",
+          "title": "Digital Marketing",
+          "description": "SEO, social media, and paid advertising campaigns that drive real results."
+        },
+        {
+          "icon": "assets/icons/solutions.svg",
+          "title": "Web Design",
+          "description": "Beautiful, conversion-focused websites that turn visitors into customers."
+        },
+        {
+          "icon": "assets/icons/support.svg",
+          "title": "Brand Strategy",
+          "description": "Build a memorable brand that stands out in your market."
+        }
+      ]
+    },
+    
+    "consulting": {
+      "businessName": "Executive Consulting Group",
+      "tagline": "Strategic Solutions for Business Growth",
+      "heroHeadline": "Unlock Your Business Potential",
+      "heroSubheadline": "Expert consulting services that help organizations optimize operations, increase profitability, and achieve sustainable growth.",
+      "heroCTA": "Schedule Consultation",
+      "services": [
+        {
+          "icon": "assets/icons/consulting.svg",
+          "title": "Strategy Consulting",
+          "description": "Develop winning strategies that align with your business objectives."
+        },
+        {
+          "icon": "assets/icons/solutions.svg",
+          "title": "Operations Optimization",
+          "description": "Streamline processes and improve efficiency across your organization."
+        },
+        {
+          "icon": "assets/icons/support.svg",
+          "title": "Change Management",
+          "description": "Navigate organizational change with expert guidance and support."
+        }
+      ]
+    },
+    
+    "web_development": {
+      "businessName": "WebCraft Solutions",
+      "tagline": "Professional Websites in 48 Hours",
+      "heroHeadline": "Get Your Business Online Fast",
+      "heroSubheadline": "Custom websites, landing pages, and web applications built with modern technology and delivered on time.",
+      "heroCTA": "Start Your Project",
+      "services": [
+        {
+          "icon": "assets/icons/consulting.svg",
+          "title": "Website Development",
+          "description": "Fast, responsive websites that work perfectly on all devices."
+        },
+        {
+          "icon": "assets/icons/solutions.svg",
+          "title": "Landing Pages",
+          "description": "High-converting landing pages for your marketing campaigns."
+        },
+        {
+          "icon": "assets/icons/support.svg",
+          "title": "Maintenance & Support",
+          "description": "Keep your website running smoothly with ongoing support."
+        }
+      ]
+    },
+    
+    "coaching": {
+      "businessName": "Success Coaching Academy",
+      "tagline": "Achieve Your Goals with Expert Coaching",
+      "heroHeadline": "Transform Your Life & Career",
+      "heroSubheadline": "One-on-one coaching programs designed to help you overcome obstacles, build confidence, and achieve your biggest goals.",
+      "heroCTA": "Book Free Session",
+      "services": [
+        {
+          "icon": "assets/icons/consulting.svg",
+          "title": "Career Coaching",
+          "description": "Advance your career with personalized guidance and strategies."
+        },
+        {
+          "icon": "assets/icons/solutions.svg",
+          "title": "Leadership Development",
+          "description": "Build the skills and mindset of an effective leader."
+        },
+        {
+          "icon": "assets/icons/support.svg",
+          "title": "Personal Growth",
+          "description": "Unlock your potential and create lasting positive change."
+        }
+      ]
+    },
+    
+    "real_estate": {
+      "businessName": "Premier Property Group",
+      "tagline": "Your Trusted Real Estate Partner",
+      "heroHeadline": "Find Your Dream Property",
+      "heroSubheadline": "Expert real estate services for buying, selling, and investing in properties. We make your real estate journey smooth and successful.",
+      "heroCTA": "Get Started Today",
+      "services": [
+        {
+          "icon": "assets/icons/consulting.svg",
+          "title": "Property Sales",
+          "description": "Buy or sell properties with expert guidance and market insights."
+        },
+        {
+          "icon": "assets/icons/solutions.svg",
+          "title": "Investment Consulting",
+          "description": "Make smart real estate investments that build wealth."
+        },
+        {
+          "icon": "assets/icons/support.svg",
+          "title": "Property Management",
+          "description": "Professional management services for your rental properties."
+        }
+      ]
+    },
+    
+    "legal_services": {
+      "businessName": "Thompson Legal Associates",
+      "tagline": "Protecting Your Rights & Interests",
+      "heroHeadline": "Expert Legal Representation",
+      "heroSubheadline": "Experienced attorneys providing comprehensive legal services for individuals and businesses. We fight for your rights.",
+      "heroCTA": "Free Consultation",
+      "services": [
+        {
+          "icon": "assets/icons/consulting.svg",
+          "title": "Business Law",
+          "description": "Contracts, formation, compliance, and business transactions."
+        },
+        {
+          "icon": "assets/icons/solutions.svg",
+          "title": "Civil Litigation",
+          "description": "Strong representation in court for your legal disputes."
+        },
+        {
+          "icon": "assets/icons/support.svg",
+          "title": "Legal Consulting",
+          "description": "Ongoing legal advice to protect your interests."
+        }
+      ]
+    },
+    
+    "fitness": {
+      "businessName": "FitLife Training Studio",
+      "tagline": "Transform Your Body, Transform Your Life",
+      "heroHeadline": "Achieve Your Fitness Goals",
+      "heroSubheadline": "Personal training, nutrition coaching, and fitness programs designed to help you get in the best shape of your life.",
+      "heroCTA": "Start Free Trial",
+      "services": [
+        {
+          "icon": "assets/icons/consulting.svg",
+          "title": "Personal Training",
+          "description": "One-on-one training sessions customized to your goals."
+        },
+        {
+          "icon": "assets/icons/solutions.svg",
+          "title": "Nutrition Coaching",
+          "description": "Meal plans and nutrition guidance for optimal results."
+        },
+        {
+          "icon": "assets/icons/support.svg",
+          "title": "Group Classes",
+          "description": "Fun, motivating group fitness classes for all levels."
+        }
+      ]
+    },
+    
+    "accounting": {
+      "businessName": "ProFinance Accounting",
+      "tagline": "Your Financial Success Partner",
+      "heroHeadline": "Expert Accounting Services",
+      "heroSubheadline": "Professional accounting, bookkeeping, and tax services for businesses and individuals. Focus on your business, we'll handle the numbers.",
+      "heroCTA": "Get Free Quote",
+      "services": [
+        {
+          "icon": "assets/icons/consulting.svg",
+          "title": "Tax Preparation",
+          "description": "Accurate tax filing and planning to minimize your liability."
+        },
+        {
+          "icon": "assets/icons/solutions.svg",
+          "title": "Bookkeeping",
+          "description": "Keep your financial records organized and up-to-date."
+        },
+        {
+          "icon": "assets/icons/support.svg",
+          "title": "Financial Consulting",
+          "description": "Strategic financial advice to grow your business."
+        }
+      ]
+    }
+  },
+  
+  "color_schemes": {
+    "professional_blue": {
+      "primary": "#2c3e8f",
+      "primaryDark": "#1e2a5f",
+      "accent": "#4f3cc9",
+      "accentDark": "#392fa6"
+    },
+    "modern_purple": {
+      "primary": "#6B46C1",
+      "primaryDark": "#553C9A",
+      "accent": "#9F7AEA",
+      "accentDark": "#805AD5"
+    },
+    "corporate_navy": {
+      "primary": "#1e3a8a",
+      "primaryDark": "#1e293b",
+      "accent": "#3b82f6",
+      "accentDark": "#2563eb"
+    },
+    "trust_teal": {
+      "primary": "#0d9488",
+      "primaryDark": "#115e59",
+      "accent": "#14b8a6",
+      "accentDark": "#0f766e"
+    },
+    "bold_red": {
+      "primary": "#dc2626",
+      "primaryDark": "#991b1b",
+      "accent": "#ef4444",
+      "accentDark": "#b91c1c"
+    },
+    "elegant_green": {
+      "primary": "#059669",
+      "primaryDark": "#047857",
+      "accent": "#10b981",
+      "accentDark": "#059669"
+    }
+  },
+  
+  "instructions": {
+    "how_to_use": "Copy the relevant example above and paste into your config.json file. Customize as needed.",
+    "color_schemes": "Choose a color scheme and add to your config.json under the 'colors' key.",
+    "mixing": "Feel free to mix and match services from different examples to create your unique offering."
+  }
+}
+

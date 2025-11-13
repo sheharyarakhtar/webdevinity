@@ -1,0 +1,9 @@
+# Netlify Redirects Configuration
+# This file handles URL redirects and rewrites
+
+# Redirect /contact to the contact form section
+/contact    /index.html#contact    200
+
+# Handle 404 errors - redirect to homepage
+/*    /index.html    404
+
