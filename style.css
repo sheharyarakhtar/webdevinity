@@ -31,6 +31,111 @@
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-text: #e5e7eb;
+  --color-text-light: #9ca3af;
+  --color-background: #0f0f23;
+  --color-background-light: #1a1a2e;
+  --color-border: #2d2d44;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] body {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .header {
+  background: var(--color-background-light);
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .hero {
+  background: var(--color-background);
+}
+
+[data-theme="dark"] .services {
+  background: var(--color-background-light);
+}
+
+[data-theme="dark"] .service-card {
+  background: var(--color-background);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .service-card h3 {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .service-card p {
+  color: var(--color-text-light);
+}
+
+[data-theme="dark"] .contact {
+  background: var(--color-background);
+}
+
+[data-theme="dark"] .contact-item {
+  background: var(--color-background-light);
+  border: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .contact-form {
+  background: var(--color-background-light);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+  background: var(--color-background);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .form-group input::placeholder,
+[data-theme="dark"] .form-group textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+[data-theme="dark"] .form-group label {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .section-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .section-subtitle {
+  color: var(--color-text-light);
+}
+
+[data-theme="dark"] .hero-title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .hero-subtitle {
+  color: var(--color-text-light);
+}
+
+[data-theme="dark"] .hero-image img {
+  opacity: 0.85;
+}
+
+[data-theme="dark"] .footer {
+  background: var(--color-background-light);
+  border-top: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .nav-menu a {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .nav-menu a:hover {
+  background: var(--color-background);
+}
+
 /* ===================================
    Reset & Base Styles
    =================================== */
@@ -165,6 +270,23 @@ section {
   background: var(--color-primary);
   border-radius: 2px;
   transition: var(--transition);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  color: var(--color-primary);
 }
 
 /* ===================================

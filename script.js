@@ -8,6 +8,7 @@ let formSubmitted = false;
 // Load config on page load
 document.addEventListener('DOMContentLoaded', async () => {
   try {
+    initializeTheme();
     await loadConfig();
     validateConfig();
     populatePage();
@@ -18,6 +19,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch (error) {
     console.error('Error initializing page:', error);
     showError('Failed to load page configuration. Please refresh the page.');
+    initializeTheme();
+    initializeNavigation();
   }
 });
 
@@ -256,6 +259,52 @@ function setReferrer() {
   const referrerField = document.getElementById('referrerField');
   if (referrerField) {
     referrerField.value = document.referrer || 'direct';
+  }
+}
+
+// ===================================
+// Theme Toggle
+// ===================================
+
+function initializeTheme() {
+  const themeToggle = document.getElementById('themeToggle');
+  
+  // Check for saved theme preference or default to system preference, fallback to dark
+  let theme = localStorage.getItem('theme');
+  
+  if (!theme) {
+    // Try to detect system preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      theme = 'light';
+    } else {
+      // Default to dark if can't detect
+      theme = 'dark';
+    }
+  }
+  
+  // Apply theme
+  document.documentElement.setAttribute('data-theme', theme);
+  updateThemeIcon(theme);
+  
+  // Toggle theme on button click
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+  }
+}
+
+function updateThemeIcon(theme) {
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
   }
 }
 

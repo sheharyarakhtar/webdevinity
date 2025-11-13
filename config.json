@@ -1,12 +1,12 @@
 {
-  "businessName": "BluePeak Digital Solutions",
-  "tagline": "We fix your digital presence fast.",
-  "heroHeadline": "Professional Web Solutions in 48 Hours",
-  "heroSubheadline": "We help businesses establish a powerful online presence with fast, reliable web solutions that drive results.",
-  "heroCTA": "Get Started Today",
-  "heroImage": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=800&fit=crop",
+  "businessName": "WebDevinity",
+  "tagline": "Fast websites for local businesses",
+  "heroHeadline": "Modern Websites Delivered in 24-48 Hours",
+  "heroSubheadline": "Clean, fast, and conversion-focused websites for restaurants, clinics, and real estate agents. Professional results without the wait.",
+  "heroCTA": "Start Your Project",
+  "heroImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop",
   "whatsapp": "923015388946",
-  "email": "contact@bluepeakdigital.com",
+  "email": "hello@webdevinity.com",
   "formAction": "https://docs.google.com/forms/d/e/1FAIpQLSd1176-7uqR5F_rFuN_emf4WNan2JNkdb95om5DFLLvSo3tXA/formResponse",
   "formFields": {
     "name": "entry.1930747673",
@@ -17,39 +17,39 @@
   "services": [
     {
       "icon": "assets/icons/consulting.svg",
-      "title": "Website Fixes",
-      "description": "Quick fixes and updates to get your website running smoothly and looking professional."
+      "title": "24-48 Hour Landing Pages",
+      "description": "Complete, professional websites for restaurants, clinics, and real estate. Fully mobile-optimized with custom branding."
     },
     {
       "icon": "assets/icons/solutions.svg",
-      "title": "Business Landing Pages",
-      "description": "High-converting landing pages designed to capture leads and grow your business."
+      "title": "Website Fixes & Updates",
+      "description": "Fix broken forms, slow pages, mobile issues, and outdated designs. Get your site working perfectly again."
     },
     {
       "icon": "assets/icons/support.svg",
-      "title": "Lead Funnels",
-      "description": "Complete funnel systems that turn visitors into customers automatically."
+      "title": "Lead Generation Funnels",
+      "description": "Contact forms, booking systems, and WhatsApp integrations that turn visitors into customers automatically."
     }
   ],
   "colors": {
-    "primary": "#2c3e8f",
-    "primaryDark": "#1e2a5f",
-    "accent": "#4f3cc9",
-    "accentDark": "#392fa6",
+    "primary": "#6B46C1",
+    "primaryDark": "#553C9A",
+    "accent": "#9F7AEA",
+    "accentDark": "#805AD5",
     "text": "#333333",
     "textLight": "#666666",
     "background": "#ffffff",
-    "backgroundLight": "#f8f9ff"
+    "backgroundLight": "#FAF5FF"
   },
   "social": {
-    "linkedin": "https://linkedin.com/company/bluepeakdigital",
-    "twitter": "https://twitter.com/bluepeakdigital",
-    "facebook": "https://facebook.com/bluepeakdigital"
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "twitter": "https://twitter.com/webdevinity",
+    "facebook": "https://facebook.com/webdevinity"
   },
   "seo": {
-    "title": "BluePeak Digital Solutions - Web Solutions in 48 Hours",
-    "description": "Professional web solutions delivered fast. Website fixes, landing pages, and lead funnels that help your business grow.",
-    "keywords": "web solutions, landing pages, website fixes, lead funnels, digital agency",
-    "ogImage": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=630&fit=crop"
+    "title": "WebDevinity - Fast Websites for Local Businesses",
+    "description": "Modern websites delivered in 24-48 hours. Landing pages, website fixes, and lead funnels for restaurants, clinics, and real estate agents.",
+    "keywords": "web developer, landing pages, website fixes, lead funnels, small business websites, restaurant websites, clinic websites",
+    "ogImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
   }
 }
